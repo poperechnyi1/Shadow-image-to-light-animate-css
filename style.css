@@ -1,0 +1,39 @@
+/*задание начальных настроек области, которую будем затемнять*/
+
+.section2-procedures{
+    display: block;
+    position: relative;
+    width: 240px;
+    height: 240px;
+    /*float: left;*/
+    /*margin: 8px 5px;*/
+   background-image: url("Medicalfilter7.png");
+}
+/*задание затемнения для внутреннего дива, который занимает 100% ширины, 100% высоты*/
+.section2-hide{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(000,000,000,0.6);/*затемнение*/
+  transition: 0.3s;/*отвечает за скорость перехода между состояниями*/
+  opacity: 1;/*полностью не прозрачный елемент*/
+}
+
+.section2-procedures p{
+    text-align: center;
+    position: relative;
+    width: 200px;
+    font-size: 24px;
+    font-family: 'Roboto-Condenced';
+    /* height: 100%; */
+    margin: 100px auto 0 auto;
+    color: #fff;
+}
+
+/*при наведение полностью делает прозрачным данный елемент*/
+.section2-procedures:hover .section2-hide{
+ opacity: 0;
+}
